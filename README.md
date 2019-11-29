@@ -4,7 +4,7 @@
 ## Smoke test
 Для запуска только smoke test необходимо в bash выполнить скрпит smoke_test.sh:
 ```console
-$ /smoke_test.sh
+$ ./smoke_test.sh
 SMOKE TEST PASSED
 ```
 
