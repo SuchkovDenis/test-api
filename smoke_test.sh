@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 status=`curl --silent --head https://api.hh.ru/vacancies | head -1 | cut -f 2 -d' '`
 
 if [ "$status" != "200" ]
