@@ -22,3 +22,27 @@ Results :
 
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
 ```
+
+## Результаты тестирования
+Результаты выполнения тестирования находятся в target/surefire-reports.
+Для получения наглядной картинки необходимо установить Allure:
+
+### Linux
+```
+sudo apt-add-repository ppa:qameta/allure
+sudo apt-get update 
+sudo apt-get install allure
+```
+### Mac
+```
+brew install allure
+```
+### Windows
+```
+scoop install allure
+```
+
+### Запуск Allure
+```
+allure serve target/surefire-reports
+```
