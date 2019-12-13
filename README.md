@@ -16,11 +16,11 @@ $ mvn test
  T E S T S
 -------------------------------------------------------
 Running TestApi
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.296 sec
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.296 sec
 
 Results :
 
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0
 ```
 
 ## Результаты тестирования
