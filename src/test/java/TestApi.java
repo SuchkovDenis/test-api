@@ -9,12 +9,13 @@ import org.junit.Assert;
 import org.junit.Test;
 import utils.JsonUtil;
 
+
 import static org.junit.Assert.*;
 
 public class TestApi {
 
-    private HttpClient client = HttpClients.createDefault();
-    private final String URL = "https://api.hh.ru/vacancies";
+    private static final HttpClient client = HttpClients.createDefault();
+    private static final String URL = "https://api.hh.ru/vacancies";
 
     /**
      * Тест, проверяющий то, что заданная апишка откликается со статусом 200 на пустой запрос
@@ -89,6 +90,22 @@ public class TestApi {
                                 && x.getName().toLowerCase().contains(name.toLowerCase())))
                 );
         assertTrue(allMatch);
+    }
+
+    /**
+     * Тест, проверяющий, что сайт не выдает ошибку сервера на некорректно большой запрос
+     */
+    @Test
+    public void bigQuery() throws Exception {
+        StringBuilder bigText = new StringBuilder();
+        for (int i = 0; i < 2_000; i++) {
+            bigText.append("I'm very BIG!! ");
+        }
+        URIBuilder builder = new URIBuilder(URL);
+        builder.setParameter("text", bigText.toString());
+        HttpGet request = new HttpGet(builder.build());
+        HttpResponse response = client.execute(request);
+        assertTrue(response.getStatusLine().getStatusCode() < 500);
     }
 
 }
