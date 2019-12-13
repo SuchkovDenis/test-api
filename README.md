@@ -37,12 +37,8 @@ $ sudo apt-get install allure
 ```
 $ brew install allure
 ```
-### Windows
-```
-$ scoop install allure
-```
 
-### Запуск Allure
+### Просмотр отчета
 ```
-$ allure serve target/surefire-reports
+$ ./report.sh
 ```
