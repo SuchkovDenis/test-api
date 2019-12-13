@@ -29,20 +29,20 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
 
 ### Linux
 ```
-sudo apt-add-repository ppa:qameta/allure
-sudo apt-get update 
-sudo apt-get install allure
+$ sudo apt-add-repository ppa:qameta/allure
+$ sudo apt-get update 
+$ sudo apt-get install allure
 ```
 ### Mac
 ```
-brew install allure
+$ brew install allure
 ```
 ### Windows
 ```
-scoop install allure
+$ scoop install allure
 ```
 
 ### Запуск Allure
 ```
-allure serve target/surefire-reports
+$ allure serve target/surefire-reports
 ```
